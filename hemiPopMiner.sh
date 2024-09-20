@@ -41,7 +41,7 @@ main() {
     fi
 
     # Ask user to fund the miner and continue after confirmation
-    printf "${BLUE}Send tbtc to your btc address from DC faucet and cehck txn on 'https://mempool.space/testnet' press y/Y after txn Sucess : ${NC}"
+    printf "${BLUE}Send tbtc to your pubkey_hash address from DC #faucet 'https://discord.gg/hemixyz' and check txn on 'https://mempool.space/testnet' press y/Y after txn Sucess : ${NC}"
     read -r funded
     if [[ ! "$funded" =~ [yY] ]]; then
         printf "${BLUE}Operation cancelled by user.${NC}\n"
@@ -49,7 +49,7 @@ main() {
     fi
 
     # Set variables: request private key from user
-    printf "${BLUE}Please enter your POPM BTC private key: ${NC}"
+    printf "${BLUE}Please enter your  private_key (that you saved before): ${NC}"
     read -r private_key
     if [[ -z "$private_key" ]]; then
         printf "${BLUE}Private key is required. Exiting...${NC}\n" >&2
