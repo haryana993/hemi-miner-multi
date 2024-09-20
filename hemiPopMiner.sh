@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Remove previous directories and script file if they exist
-rm -rf hemi-miner && rm -rf hemiPopMiner.sh
+rm -rf hemiPopMiner.sh
 
 # Define colors
 BLUE='\033[1;34m'
@@ -17,15 +17,9 @@ check_success() {
 
 # Main script
 main() {
-    # Clone the GitHub repository and navigate to the directory
-    git clone https://github.com/arun993/hemi-miner.git && cd hemi-miner || return 1
-
-    # Update and upgrade system packages
-    sudo apt update && sudo apt upgrade -y
-    check_success
 
     # Extract the miner files and change to the extracted directory
-    tar xvf heminetwork_v0.4.3_linux_amd64.tar.gz && cd heminetwork_v0.4.3_linux_amd64 || return 1
+    cd heminetwork_v0.4.3_linux_amd64 || return 1
 
     # Generate keys and store them in JSON format
     ./keygen -secp256k1 -json -net="testnet" > ~/popm-address.json
