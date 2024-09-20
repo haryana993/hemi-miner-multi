@@ -48,7 +48,7 @@ main() {
     fi
 
     # Ask user to fund the miner and continue after confirmation
-    printf "${BLUE}Fund your miner and press y/Y if you have funded it: ${NC}"
+    printf "${BLUE}Send tbtc to yourd address from DC and press y/Y if you have funded it: ${NC}"
     read -r funded
     if [[ ! "$funded" =~ [yY] ]]; then
         printf "${BLUE}Operation cancelled by user.${NC}\n"
