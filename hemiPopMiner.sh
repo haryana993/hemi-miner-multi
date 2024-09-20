@@ -24,13 +24,6 @@ main() {
     sudo apt update && sudo apt upgrade -y
     check_success
 
-    # Install 'screen' package if not already installed
-    sudo apt install -y screen
-    check_success
-
-    # Start a new screen session named "hemi"
-    screen -S hemi || return 1
-
     # Extract the miner files and change to the extracted directory
     tar xvf heminetwork_v0.4.3_linux_amd64.tar.gz && cd heminetwork_v0.4.3_linux_amd64 || return 1
 
