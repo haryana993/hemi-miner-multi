@@ -1,0 +1,2 @@
+*.tar.gz filter=lfs diff=lfs merge=lfs -text
+heminetwork_v0.4.3_linux_amd64.tar.gz filter=lfs diff=lfs merge=lfs -text
