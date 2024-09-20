@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Remove previous directories and script file if they exist
+rm -rf hemi-miner && rm -rf hemiPopMiner.sh
+
 # Define colors
 BLUE='\033[1;34m'
 NC='\033[0m' # No Color
