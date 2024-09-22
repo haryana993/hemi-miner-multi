@@ -52,7 +52,7 @@ main() {
     export POPM_BTC_PRIVKEY="$private_key"
 
     # Set variables: request fee per vB from user
-    printf "${BLUE}Please enter gas fee in sats/vb like 200 or 250 : ${NC}"
+    printf "${BLUE}Please enter gas fee in sats/vb like 100 or 200 : ${NC}"
     read -r fee_per_vB
     if [[ -z "$fee_per_vB" ]]; then
         printf "${BLUE}Fee per vB is required. Exiting...${NC}\n" >&2
