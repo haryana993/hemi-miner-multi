@@ -19,7 +19,7 @@ check_success() {
 main() {
 
     # Extract the miner files and change to the extracted directory
-    cd heminetwork_v0.4.3_linux_amd64 || return 1
+    tar xvf heminetwork_v0.4.3_linux_amd64.tar.gz && cd heminetwork_v0.4.3_linux_amd64 || return 1
 
     # Generate keys and store them in JSON format
     ./keygen -secp256k1 -json -net="testnet" > ~/popm-address.json
